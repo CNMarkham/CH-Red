@@ -8,7 +8,7 @@ public class GravityFlip : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
 
@@ -17,10 +17,9 @@ public class GravityFlip : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             avatarRigidbody.gravityScale *= -1;
-            Vector3 newDirection = avatarRigidbody.transform.localScale;
+            Vector3 newDirection = transform.localScale;
             newDirection.y *= -1;
-            avatarRigidbody.transform.localScale = newDirection;
-            
+            transform.localScale = newDirection;
         }
     }
 }
