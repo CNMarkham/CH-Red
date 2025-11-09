@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Surfaces
+  - Collectable
+  - ThrowingObject
   layers:
   - Default
   - TransparentFX
