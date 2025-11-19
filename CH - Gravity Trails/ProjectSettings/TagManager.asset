@@ -8,6 +8,7 @@ TagManager:
   - Surfaces
   - Collectable
   - ThrowingObject
+  - Throwable
   layers:
   - Default
   - TransparentFX

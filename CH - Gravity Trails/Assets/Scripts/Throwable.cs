@@ -6,17 +6,29 @@ public class Throwable : MonoBehaviour
 {
     public GameObject objectThrown;
     public Vector3 offset;
+    public int throwableCounter;
     void Start()
     {
         
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("ThrowingObject"))
+        {
+            throwableCounter += 1;
+            Destroy(collision.gameObject);
+        }
+    }
     void Update()
     {
-        offset = new Vector3(1, 0, 0);
-        if (Input.GetButtonDown("Fire1"))
+        
+        if (Input.GetButtonDown("Fire1") && throwableCounter >= 1)
         {
-            Instantiate(objectThrown, transform.position, transform.rotation);
+            offset = transform.localScale.x * new Vector3(1, 0, 0);
+            Debug.Log(offset);
+            Vector3 throwablePosition = transform.position + offset;
+            Instantiate(objectThrown, throwablePosition, transform.rotation);
+            throwableCounter -= 1;
         }
     }
 }
