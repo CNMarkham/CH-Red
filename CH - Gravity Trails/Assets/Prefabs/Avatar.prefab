@@ -1540,6 +1540,7 @@ MonoBehaviour:
   objectThrown: {fileID: 2006081466200390246, guid: 2b78a2ce40ce3d44c904d41edbe0e605, type: 3}
   offset: {x: 0, y: 0, z: 0}
   throwableCounter: 0
+  throwable: {fileID: 2006081466200390246, guid: 2b78a2ce40ce3d44c904d41edbe0e605, type: 3}
 --- !u!1 &919825732383379168
 GameObject:
   m_ObjectHideFlags: 0

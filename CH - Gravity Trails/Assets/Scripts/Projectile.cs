@@ -11,13 +11,6 @@ public class Projectile : MonoBehaviour
     {
         direction = GameObject.FindGameObjectWithTag("Player").GetComponent<Throwable>().offset;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position += direction * Time.deltaTime * speed;
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -25,5 +18,18 @@ public class Projectile : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position += direction * Time.deltaTime * speed;
+        Invoke("DestroyThrowable", 1);
+    }
+
+
+    public void DestroyThrowable()
+    {
+        Destroy(gameObject);
     }
 }
