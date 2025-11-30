@@ -11,7 +11,7 @@ public class Throwable : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -20,6 +20,7 @@ public class Throwable : MonoBehaviour
         {
             throwableCounter += 1;
             Destroy(collision.gameObject);
+            collectableCounter.text = throwableCounter.ToString();
         }
     }
     void Update()
@@ -31,6 +32,7 @@ public class Throwable : MonoBehaviour
             Vector3 throwablePosition = transform.position + offset;
             Instantiate(objectThrown, throwablePosition, transform.rotation);
             throwableCounter -= 1;
+            collectableCounter.text = throwableCounter.ToString();
         }
         
     }
