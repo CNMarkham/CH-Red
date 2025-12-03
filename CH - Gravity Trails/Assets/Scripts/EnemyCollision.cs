@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class EnemyCollision : MonoBehaviour
 {
+    public Scene scene;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene("Level1");
+            if(SceneManager.GetActiveScene().buildIndex == 0) //build index
+            {
+
+            }
         }
     }
 }
