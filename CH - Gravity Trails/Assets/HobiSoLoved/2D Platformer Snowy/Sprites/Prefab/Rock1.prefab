@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 674672532667421899}
   - component: {fileID: 1885214828512775489}
   - component: {fileID: 2874689393726891404}
-  - component: {fileID: 1104816722280201178}
+  - component: {fileID: 8936721968443112005}
   m_Layer: 0
   m_Name: Rock1
   m_TagString: Enemy
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3034
   m_Sprite: {fileID: 21300000, guid: abd915b15c075214da083c6d0b4305f4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &1104816722280201178
+--- !u!114 &8936721968443112005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3454884603603466432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce471725602a534d919b8b9c3b78816, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a809cb538f5d71498ae2a614242a4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10

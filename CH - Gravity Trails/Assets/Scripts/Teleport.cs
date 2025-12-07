@@ -17,8 +17,9 @@ public class Telepor : MonoBehaviour
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision);
         if (collision.gameObject.tag == "Player" && enemyCount == 0)
         {
             SceneManager.LoadScene(1);
