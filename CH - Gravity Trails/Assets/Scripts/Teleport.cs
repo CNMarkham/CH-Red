@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Telepor : MonoBehaviour
 {
     public int enemyCount;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Telepor : MonoBehaviour
     void Update()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,4 +27,5 @@ public class Telepor : MonoBehaviour
             SceneManager.LoadScene(1);
         }
     }
+
 }

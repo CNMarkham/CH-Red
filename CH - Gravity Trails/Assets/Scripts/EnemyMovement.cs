@@ -17,7 +17,6 @@ public class crusher1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Surfaces"))
         {
-            Debug.Log(collision.gameObject);
             speed *= -1;
         }
     }
