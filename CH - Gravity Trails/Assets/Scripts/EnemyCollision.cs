@@ -20,7 +20,7 @@ public class EnemyCollision : MonoBehaviour
             if (scene.name == "Level2")
             {
                 SceneManager.LoadScene("Level2");
-                scene.name = "Level2";
+                //scene.name = "Level2";
             }
             else
             {
