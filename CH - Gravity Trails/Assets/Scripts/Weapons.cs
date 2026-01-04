@@ -5,9 +5,9 @@ using UnityEngine.Animations;
 public class Weapons : MonoBehaviour
 {
     private Animator animator;
-    public Transform player;
     public float speed = 5f;
     public Collider2D c;
+    public Transform player;
     public Vector3 playerDirection;
     // Start is called before the first frame update
     void Start()
@@ -27,10 +27,11 @@ public class Weapons : MonoBehaviour
             animator.SetTrigger("Attack");
             Invoke("EndCollider", 1.05f);
         }
-        transform.position = player.transform.position + new Vector3(2, 1, 0);
-        if (Input.GetKey(KeyCode.D))
+        transform.position = player.transform.position;
+        //transform.localScale = new Vector3(transform.localScale.x, player.transform.localScale.y * 0.5f, transform.localScale.z);
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.localScale *= player.localScale.x;
+            transform.position = new Vector3(transform.position.x, transform.position.y + -1, transform.position.z);
         }
     }
 
