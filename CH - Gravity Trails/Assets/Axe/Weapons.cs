@@ -9,22 +9,41 @@ public class Weapons : MonoBehaviour
     public Collider2D c;
     public Transform player;
     public Vector3 playerDirection;
+    public Vector3 currentDirection;
     // Start is called before the first frame update
     void Start()
     {
+        currentDirection = transform.localScale;
         animator = GetComponent<Animator>();
         c = GetComponent<BoxCollider2D>();
-        playerDirection = GameObject.FindGameObjectWithTag("Player").transform.localScale;
+        
     }
 
     // Update is called once per frame
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        playerDirection = GameObject.FindGameObjectWithTag("Player").transform.localScale;
+        if (playerDirection.x == -1)
+        {
+            currentDirection.x = 0.5f;
+            transform.localScale = currentDirection;
+        }
+        else if(playerDirection.x == 1)
+        {
+            currentDirection.x = -0.5f;
+            transform.localScale = currentDirection;
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && playerDirection.x == 1)
         {
             c.enabled = true;
             animator.SetTrigger("Attack");
+            Invoke("EndCollider", 1.05f);
+        }
+        else if(Input.GetKeyDown(KeyCode.Q) && playerDirection.x == -1)
+        {
+            c.enabled = true;
+            animator.SetTrigger("AttackBackward");
             Invoke("EndCollider", 1.05f);
         }
         transform.position = player.transform.position;
