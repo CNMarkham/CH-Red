@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class Telepor : MonoBehaviour
 {
     public int enemyCount;
-   
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -21,10 +22,12 @@ public class Telepor : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
         Debug.Log(collision);
         if (collision.gameObject.tag == "Player" && enemyCount == 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 
