@@ -34,13 +34,13 @@ public class Weapons : MonoBehaviour
             currentDirection.x = -0.5f;
             transform.localScale = currentDirection;
         }
-        if (Input.GetKeyDown(KeyCode.Q) && playerDirection.x == 1)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && playerDirection.x == 1)
         {
             c.enabled = true;
             animator.SetTrigger("Attack");
             Invoke("EndCollider", 1.05f);
         }
-        else if(Input.GetKeyDown(KeyCode.Q) && playerDirection.x == -1)
+        else if(Input.GetKeyDown(KeyCode.LeftControl) && playerDirection.x == -1)
         {
             c.enabled = true;
             animator.SetTrigger("AttackBackward");
