@@ -6,10 +6,11 @@ public class CodeyMove : MonoBehaviour
     public float Speed = 15f;
     Animator anim;
     public bool running = false;
-    public bool canMove = true;
+    public bool canMove;
     public Vector3 move;
     public float _rotationSpeed = 50f;
     private Rigidbody rb;
+    public TimersCountdown startCountdown;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -18,9 +19,16 @@ public class CodeyMove : MonoBehaviour
     }
     void Update()
     {
+        if (startCountdown.totalCountdownTime >= 0)     
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
         if (canMove)
         {
-
             float vertical = Input.GetAxis("Vertical");
             float horizontal = Input.GetAxis("Horizontal");            
             Vector3 rotation = new Vector3(0, horizontal * _rotationSpeed * Time.deltaTime, 0);
