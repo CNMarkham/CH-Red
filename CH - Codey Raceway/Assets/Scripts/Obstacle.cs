@@ -13,5 +13,10 @@ public class Obstacle : MonoBehaviour
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
         }
+        if (collision.gameObject.CompareTag("Shell"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

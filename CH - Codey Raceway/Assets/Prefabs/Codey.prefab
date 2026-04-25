@@ -784,6 +784,7 @@ MonoBehaviour:
   canMove: 1
   move: {x: 0, y: 0, z: 0}
   _rotationSpeed: 50
+  startCountdown: {fileID: 0}
 --- !u!1 &2749644331451433365
 GameObject:
   m_ObjectHideFlags: 0
