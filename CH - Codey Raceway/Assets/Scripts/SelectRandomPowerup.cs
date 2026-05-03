@@ -21,6 +21,7 @@ public class SelectRandomPowerup : MonoBehaviour
     {
         if (other.gameObject.tag == "itemBoxes")
         {
+
             randomNumberInList = Random.Range(0, powerupList.Count);
             chosenPowerup = powerupList[randomNumberInList];
             amountPowerUp += 1;
