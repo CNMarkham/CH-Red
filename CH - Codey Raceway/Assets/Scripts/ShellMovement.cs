@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class ShellMovement : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         transform.position += transform.forward * Time.deltaTime * 50;
-        
     }
-
 }

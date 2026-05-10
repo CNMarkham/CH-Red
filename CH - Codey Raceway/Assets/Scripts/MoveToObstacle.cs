@@ -5,30 +5,30 @@ using UnityEngine.AI;
 
 public class MoveToObstacle : MonoBehaviour
 {
-    public Transform player;
-    public GameObject[] obstacle = GameObject.FindGameObjectsWithTag("obstacle");
-    private GameObject target;
-    private GameObject finalTarget;
+    public GameObject[] obstacle;
+    public Vector3 player;
+    public GameObject target;
+    public GameObject finalTarget = null;
     private NavMeshAgent agent;
+    public float closestdistance;
 
-    public void obstacleDistance()
-    {
-        Vector3 offset = player.transform.position - 
-    }
     private void Start()
     {
-        finalTarget.transform.position = new Vector3(obstacle[0]);
+        obstacle = GameObject.FindGameObjectsWithTag("obstacle");
+        closestdistance = 100000f;
+        finalTarget = obstacle[0];
         player = GameObject.FindGameObjectWithTag("Player").transform.position;
         agent = GetComponent<NavMeshAgent>();
-        agent.destination = obstacle.transform.position;
         foreach (GameObject target in obstacle)
         {
-            if (target.transform < finalTarget.transform)
+            float dist = Vector3.Distance(target.transform.position, transform.position);
+            if (dist < closestdistance)
             {
+                closestdistance = dist;
                 finalTarget = target;
             }
         }
+        agent.destination = finalTarget.transform.position;
     }
-
 
 }

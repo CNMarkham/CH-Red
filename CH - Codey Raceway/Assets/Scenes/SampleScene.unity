@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6858,7 +6859,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerupList:
   - {fileID: 6565845002744891360, guid: 94ef5c39d0dc1cc428412ef024faa7e4, type: 3}
-  - {fileID: 6565845002744891360, guid: c7a5dff2a6af87a44b3d8ed096d127dd, type: 3}
   randomNumberInList: 0
   amountPowerUp: 0
   chosenPowerup: {fileID: 0}
@@ -8718,6 +8718,10 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 656600ea12dcd894d99e51d4d2981d69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 656600ea12dcd894d99e51d4d2981d69, type: 3}
+      propertyPath: m_Icon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 656600ea12dcd894d99e51d4d2981d69, type: 3}
       propertyPath: m_Name
