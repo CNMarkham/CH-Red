@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
+    public void reload()
+    {
+        SceneManager.LoadScene(0);
+    }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject);
         if (collision.gameObject.CompareTag("Player"))
         {
             print("You Died!");
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+            SceneManager.LoadScene(2);
+            
         }
         else if (collision.gameObject.CompareTag("Shell"))
         {

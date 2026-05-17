@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4247901773934643601}
   - component: {fileID: 3623499171954858571}
   - component: {fileID: 6538684869971846457}
+  - component: {fileID: 7922860691522695056}
   - component: {fileID: 6283786263811913429}
   - component: {fileID: 6050178643113503692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NavMeshShell
   m_TagString: Shell
   m_Icon: {fileID: 0}
@@ -107,6 +108,33 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7922860691522695056
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6565845002744891360}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!195 &6283786263811913429
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -118,7 +146,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.49999997
   m_Speed: 100
-  m_Acceleration: 20
+  m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -143,6 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: []
   player: {x: 0, y: 0, z: 0}
-  target: {fileID: 0}
-  finalTarget: {fileID: 0}
   closestdistance: 0

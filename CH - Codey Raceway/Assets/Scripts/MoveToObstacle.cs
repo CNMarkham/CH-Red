@@ -7,8 +7,8 @@ public class MoveToObstacle : MonoBehaviour
 {
     public GameObject[] obstacle;
     public Vector3 player;
-    public GameObject target;
-    public GameObject finalTarget = null;
+    private GameObject target;
+    private GameObject finalTarget = null;
     private NavMeshAgent agent;
     public float closestdistance;
 
@@ -31,4 +31,13 @@ public class MoveToObstacle : MonoBehaviour
         agent.destination = finalTarget.transform.position;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("obstacle"))
+        {
+            Debug.Log(collision);
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

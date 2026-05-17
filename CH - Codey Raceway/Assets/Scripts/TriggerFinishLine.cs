@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TiggerFinishLine : MonoBehaviour
 {
@@ -18,11 +19,12 @@ public class TiggerFinishLine : MonoBehaviour
             if (checkpointTracker.triggeredCheckpoints == checkpointTracker.numberOfCheckpoints)
             {
                 winText.enabled = true;
-                print("You Win");
+                SceneManager.LoadScene(1);
             }
             else
             {
                 print("Cheater!");
+                SceneManager.LoadScene(0);
             }
         }
     }

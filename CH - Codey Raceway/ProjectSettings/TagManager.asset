@@ -6,16 +6,16 @@ TagManager:
   tags:
   - Checkpoint
   - itemBoxes
-  - Shell
   - obstacle
+  - Shell
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Shell
   - 
   - 
   - 
