@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class TimersCountdown : MonoBehaviour
 {
     public Text lapTime;
@@ -42,10 +41,7 @@ public class TimersCountdown : MonoBehaviour
         }
         if (totalLapTime <= 0)
         {
-            print("you lost");
-            lapTime.enabled = false;
-            LoseText.enabled = true;
-            Invoke("ReloadScene", 3);
+            SceneManager.LoadScene(1);
         }
         if (Input.GetKeyDown(KeyCode.R))
         {

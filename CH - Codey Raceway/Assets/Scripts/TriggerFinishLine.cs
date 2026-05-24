@@ -19,7 +19,7 @@ public class TiggerFinishLine : MonoBehaviour
             if (checkpointTracker.triggeredCheckpoints == checkpointTracker.numberOfCheckpoints)
             {
                 winText.enabled = true;
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             else
             {

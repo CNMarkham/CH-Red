@@ -15,7 +15,7 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             print("You Died!");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
             
         }
         else if (collision.gameObject.CompareTag("Shell"))

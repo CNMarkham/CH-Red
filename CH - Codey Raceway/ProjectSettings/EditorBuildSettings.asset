@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/You win.unity
-    guid: 02935dcb120b8b34cbcda0b104f88fe9
+    path: Assets/Scenes/Lose.unity
+    guid: 03d2cc69e1ba29e4eb15a2142ee8300c
   - enabled: 1
-    path: Assets/Scenes/You lose.unity
-    guid: 02aaec61c685fa3489dd7ef4af21c0c9
+    path: Assets/Scenes/Win.unity
+    guid: 20ac26de91516d54f8562755af6707a7
   m_configObjects: {}

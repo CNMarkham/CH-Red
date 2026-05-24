@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class retry : MonoBehaviour
 {
-    private void Start()
-    {
-        
-    }
+
     public void reloadGame()
     {
         SceneManager.LoadScene(0);
